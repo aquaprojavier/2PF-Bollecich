@@ -53,7 +53,7 @@ export class AddEditCourseComponent implements OnInit {
 
   agregarCurso(curso: Course) {
     this.courseService.addCourse(curso);
-    this.snackBar.open('El curso fue elimimado con exito!', '', {
+    this.snackBar.open('El curso fue creado con exito!', '', {
       duration: 3000
     })
     this.route.navigate(['/curso']);

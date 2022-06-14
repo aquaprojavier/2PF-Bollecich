@@ -4,6 +4,7 @@ import { Student } from '../list-student/student';
 import { StudentService } from '../../services/student.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { CourseService } from 'src/app/services/course.service';
 
 @Component({
   selector: 'app-add-edit-student',
@@ -11,7 +12,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./add-edit-student.component.scss']
 })
 export class AddEditStudentComponent implements OnInit {
-
   cursos: any[] = ['Angular', 'React', 'Vue']
   idStudent: any;
   accion = 'Crear';
@@ -19,6 +19,7 @@ export class AddEditStudentComponent implements OnInit {
 
   constructor(private fb: FormBuilder,
     private estudianteService: StudentService,
+    private cursoService: CourseService,
     private route: Router,
     private snackBar: MatSnackBar,
     private aRoute: ActivatedRoute) {

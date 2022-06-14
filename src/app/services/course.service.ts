@@ -13,6 +13,8 @@ export class CourseService {
     { nombre: 'Svelte', duracion: 35, fechaInicio: new Date('2022-09-21') },
   ]
 
+  lista: string[];
+
   constructor() { }
 
   getCourses() {
